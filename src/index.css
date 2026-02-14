@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-Poppins: "Poppins", sans-serif;
+  --font-Playwrite-cz: "Playwrite CZ", sans-serif;
+  --color-primary: #854d3d;
+  --color-secondary: #4a1e1b;
+  --color-brandDark: #270c03;
+  --container-padding: 1rem;
+  --container-padding-sm: 2rem;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+@media (min-width: 640px) {
+  .container {
+    padding-left: var(--container-padding-sm);
+    padding-right: var(--container-padding-sm);
+  }
+}
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/src/assets/font/PoppinsLatin-Light.ttf") format("ttf");
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform : rotate(360deg)
+  }
+}
+
+.spin{
+  animation: spin 40s linear infinite;
+}
+
+
+.playwrite-cz {
+  font-family: "Playwrite CZ", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* smooth scroll */
+html{
+  scroll-behavior: smooth;
+}
